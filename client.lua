@@ -154,7 +154,7 @@ RegisterCommand('uber', function()
 					exports['mythic_notify']:DoHudText('uber', 'UBER :: You must be in a vehicle specified by the company')
 				end
 			-- end
-			if
+			if IsPedInAnyVehicle(playerPed, false) and GetPedInVehicleSeat(vehicle, -1) == playerPed then
 				exports['mythic_notify']:DoHudText('uber', 'UBER :: In the vehicle')
 			else
 				exports['mythic_notify']:DoHudText('uber', 'UBER :: You must be in a vehicle specified by the company')
